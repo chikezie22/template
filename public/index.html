@@ -6,13 +6,13 @@
     <title>template</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body class="min-h-dvh grid max-w-[1400px] mx-auto">
-    <header class="relative h-[803px] w-full">
+  <body class="h-screen grid min-w-[1400px] mx-auto">
+    <header class="relative min-h-[813px] w-full flex flex-col gap-[71px]">
       <video
         autoplay
         muted
         loop
-        class="absolute inset-0 w-full h-full object-cover z-0"
+        class="absolute inset-0 w-full h-full object-cover"
       >
         <source src="./assets/video/video.mp4" type="video/mp4" />
       </video>
@@ -37,7 +37,9 @@
             >
           </div>
 
-          <div class="flex w-[394px] h-[47px] justify-between items-center">
+          <div
+            class="flex w-[394px] h-[47px] justify-between items-center font-poppins text-base font-normal"
+          >
             <p>Home</p>
             <p>About</p>
             <p>Blog</p>
@@ -47,6 +49,46 @@
             </div>
           </div>
         </nav>
+      </div>
+      <!-- Other header Content in the header ------------------------------------------------------- -->
+      <div
+        class="relative z-10 w-full h-[545.18px] flex flex-col justify-center items-center text-[#fff]"
+      >
+        <p class="font-montserrat font-normal text-center text-[30.67px]">
+          Unforgettable experiences tailored for you
+        </p>
+        <div
+          class="flex flex-col gap-[53px] w-[1212.76px] h-[468.18px] justify-between items-center"
+        >
+          <div
+            class="flex text-[243.33px] leading-[365px] justify-center font-normal bebas bg-gradient-to-b from-[#FFFFFF] to-[#828282] text-transparent bg-clip-text w-full h-[310.18px]"
+          >
+            <p>W</p>
+            <p>A</p>
+            <p>N</p>
+            <p>D</p>
+            <p>E</p>
+            <p>R</p>
+            <p>L</p>
+            <p>U</p>
+            <p>S</p>
+            <p>T</p>
+          </div>
+
+          <button
+            class="flex w-[180px] gap-[8px] items-center justify-center border border-slate-300 rounded-md p-2"
+          >
+            Explore Now
+            <span>
+              <img
+                src="./assets/img/arrow-right.svg"
+                alt="arrow-right"
+                width="30px"
+                height="30px"
+              />
+            </span>
+          </button>
+        </div>
       </div>
     </header>
     <main>
