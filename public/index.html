@@ -6,8 +6,8 @@
     <title>template</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body class="h-screen grid min-w-[1400px] mx-auto">
-    <header class="relative w-full h-[813px] flex flex-col gap-[71px]">
+  <body class="h-screen grid max-w-[1400px] mx-auto">
+    <header class="relative w-full h-[750px] flex flex-col gap-[71px]">
       <video
         autoplay
         muted
@@ -52,7 +52,7 @@
       </div>
       <!-- Other header Content in the header ------------------------------------------------------- -->
       <div
-        class="relative z-10 w-full h-[545.18px] flex flex-col gap-[31px] justify-center items-center text-[#fff]"
+        class="relative z-10 w-full h-[545.18px] flex flex-col justify-center items-center text-[#fff]"
       >
         <p class="font-montserrat font-normal text-[30.67px]">
           Unforgettable experiences tailored for you
@@ -61,18 +61,18 @@
           class="flex flex-col gap-[53px] w-[1212.76px] justify-center items-center"
         >
           <div
-            class="flex text-[243.33px] leading-none justify-center font-normal bebas bg-gradient-to-b from-[#FFFFFF] to-[#828282] text-transparent bg-clip-text w-[980px] h-[365.18px] items-start"
+            class="flex text-[243.33px] items-end justify-center font-normal bebas bg-gradient-to-b from-[#FFFFFF] to-[#828282] text-transparent bg-clip-text w-[980px] leading-none"
           >
-            <p>W</p>
-            <p>A</p>
-            <p>N</p>
-            <p>D</p>
-            <p>E</p>
-            <p>R</p>
-            <p>L</p>
-            <p>U</p>
-            <p>S</p>
-            <p>T</p>
+            <span>W</span>
+            <span>A</span>
+            <span>N</span>
+            <span>D</span>
+            <span>E</span>
+            <span>R</span>
+            <span>L</span>
+            <span>U</span>
+            <span>S</span>
+            <span>T</span>
           </div>
 
           <button
@@ -105,6 +105,33 @@
             An incredible calm has completely embraced me.
           </p>
         </div>
+        <div
+          class="max-w-[1198px] h-[361px] flex justify-center gap-[12px] overflow-hidden relative"
+        >
+          <div
+            class="flex gap-[10px] transition ease-in-out duration-500"
+            id="slider-container"
+          >
+            <img src="./assets/img/image-1.png" alt="image-1" />
+            <img src="./assets/img/image-2.png" alt="image-2" />
+            <img src="./assets/img/image-3.png" alt="image-3" />
+            <img src="./assets/img/image-4.png" alt="image-4" />
+            <img src="./assets/img/image-5.png" alt="image-5" />
+            <img src="./assets/img/image-6.png" alt="image-6" />
+            <img src="./assets/img/image-7.png" alt="image-7" />
+            <img src="./assets/img/image-8.png" alt="image-8" />
+            <img src="./assets/img/image-9.png" alt="image-9" />
+            <img src="./assets/img/image-10.png" alt="image-10" />
+            <img src="./assets/img/image-11.png" alt="image-11" />
+            <img src="./assets/img/image-12.png" alt="image-12" />
+          </div>
+          <span class="absolute top-2/4 left-3" id="prev-button">
+            <img src="./assets/img/left.svg" alt="left"
+          /></span>
+          <span class="absolute top-2/4 right-4" id="next-button"
+            ><img src="./assets/img/right.svg" alt="right"
+          /></span>
+        </div>
       </section>
       <section></section>
       <section></section>
@@ -114,5 +141,7 @@
       <section></section>
       <section></section>
     </main>
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
