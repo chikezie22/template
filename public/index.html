@@ -5,15 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>template</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              bebas: ['"Bebas Neue"', 'cursive'],
+              montserrat: ['"Montserrat"', 'sans-serif'],
+              poppins: ['"Poppins"', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
   <body class="h-screen grid max-w-[1400px] mx-auto">
     <header class="relative w-full h-[750px] flex flex-col gap-[71px]">
-      <video
-        autoplay
-        muted
-        loop
-        class="absolute inset-0 w-full h-full object-cover"
-      >
+      <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
         <source src="./assets/video/video.mp4" type="video/mp4" />
       </video>
       <div
@@ -22,19 +34,10 @@
         <nav
           class="flex justify-between items-center h-[68px] px-[40px] py-[16px] w-[1198px] mx-auto text-white"
         >
-          <div
-            class="flex items-center gap-[10px] min-w-[121.83px] h-[34.52px]"
-          >
-            <img
-              src="./assets/img/Logo.svg"
-              alt=""
-              width="39.83px"
-              height="34.52px"
-            />
+          <div class="flex items-center gap-[10px] min-w-[121.83px] h-[34.52px]">
+            <img src="./assets/img/Logo.svg" alt="" width="39.83px" height="34.52px" />
 
-            <span class="font-mulish text-base font-extrabold text-white"
-              >Wivali AI</span
-            >
+            <span class="font-mulish text-base font-extrabold text-white">Wivali AI</span>
           </div>
 
           <div
@@ -57,9 +60,7 @@
         <p class="font-montserrat font-normal text-[30.67px]">
           Unforgettable experiences tailored for you
         </p>
-        <div
-          class="flex flex-col gap-[53px] w-[1212.76px] justify-center items-center"
-        >
+        <div class="flex flex-col gap-[53px] w-[1212.76px] justify-center items-center">
           <div
             class="flex text-[243.33px] items-end justify-center font-normal bebas bg-gradient-to-b from-[#FFFFFF] to-[#828282] text-transparent bg-clip-text w-[980px] leading-none"
           >
@@ -93,15 +94,11 @@
     </header>
     <main class="relative w-full">
       <div class="relative w-full h-[508px]">
-        <section
-          class="h-[508px] w-[1197px] mx-auto absolute inset-0 top-[-50px]"
-        >
+        <section class="h-[508px] w-[1197px] mx-auto absolute inset-0 top-[-50px]">
           <div
             class="w-[1062px] h-[147px] rounded-[20px] px-[30px] flex flex-col gap-2 justify-center items-center mx-auto bg-white"
           >
-            <p class="font-montserrat font-bold text-[36px] text-[#1e1e1e]">
-              Must-Visit
-            </p>
+            <p class="font-montserrat font-bold text-[36px] text-[#1e1e1e]">Must-Visit</p>
             <p class="font-poppins font-normal text-[14px] text-[#7b7b7b]">
               An incredible calm has completely embraced me.
             </p>
@@ -109,10 +106,7 @@
           <div
             class="max-w-[1198px] h-[361px] flex justify-center gap-[12px] overflow-hidden relative"
           >
-            <div
-              class="flex gap-[10px] transition ease-in-out duration-500"
-              id="slider-container"
-            >
+            <div class="flex gap-[10px] transition ease-in-out duration-500" id="slider-container">
               <img src="./assets/img/image-1.png" alt="image-1" />
               <img src="./assets/img/image-2.png" alt="image-2" />
               <img src="./assets/img/image-3.png" alt="image-3" />
@@ -135,32 +129,69 @@
           </div>
         </section>
       </div>
-      <section class="class="h-[869px] w-[1440px] mx-auto gap-[30px]">
-      <div class="h-[147px] flex flex-col gap-[8px] justify-center items-center">
-        <p class="font-montserrat font-bold text-[36px]" >Our Exceptional Services</p>
-        <p class="font-poppins font-normal text-[16px] text-[#7B7B7B]">Everything you need for a seamless travel experience.</p>
-      </div>
-      <div class="flex gap-[30px] justify-center items-center group h-[631.85px]">
-        <div class="w-[568px] h-[569px] rounded-[20px] overflow-hidden scale-y-100 origin-top  transition-transform duration-300  ease-in-out group-hover:scale-y-110 " >
-          <video   autoplay
-          muted
-          loop
-          class=" w-full h-full object-cover">
-          <source src="./assets/video/people.mp4" type="video/mp4"/>
-        </video>
+      <section class="min-h-[869px] w-full mx-auto gap-[30px]">
+        <div class="h-[147px] flex flex-col gap-[8px] justify-center items-center">
+          <p class="font-montserrat font-bold text-[36px]">Our Exceptional Services</p>
+          <p class="font-poppins font-normal text-[16px] text-[#7B7B7B]">
+            Everything you need for a seamless travel experience.
+          </p>
         </div>
+        <div class="flex gap-[30px] justify-center items-center group h-[631.85px]">
+          <div
+            class="w-[568px] h-[569px] rounded-[20px] overflow-hidden origin-top transition-height duration-300 ease-in-out group-hover:h-[631.845px] self-start"
+          >
+            <video autoplay muted loop class="w-full h-full object-cover">
+              <source src="./assets/video/people.mp4" type="video/mp4" />
+            </video>
+          </div>
 
-        <!-- other icon div -->
-         <div class="w-[599px] grid grid-cols-2 gap-[20px]">
-          <div class="w-[285.21px] h-[300.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#0191c3] rounded-[20.79px]"><img src="./assets/img/location.svg" alt="location">
-          <p class="font-poppins font-semibold text-center text-[#FFFFFF] text-[16.59px] w-[214.83px]">Tailored itineraries to match your unique preferences.</p></div>
-          <div class="w-[285.21px] h-[300.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#d64a17] rounded-[20.79px]"><img src="./assets/img/plane.svg" alt="plane"> <p class="font-poppins font-semibold text-center text-[#FFFFFF] text-[16.59px] w-[214.83px]">Seamless bookings for flights and accomodations worldwide.</p></div>
-          <div class="w-[285.21px] h-[300.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#469325] rounded-[20.79px]"><img src="./assets/img/shield.svg" alt="shield"> <p class="font-poppins font-semibold text-center text-[#FFFFFF] text-[16.59px] w-[214.83px]">Comprehensive coverage for a worry-free journey.</p></div>
-          <div class="w-[285.21px] h-[300.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#626262] rounded-[20.79px]"><img src="./assets/img/phone.svg" alt="phone"> <p class="font-poppins font-semibold text-center text-[#FFFFFF] text-[16.59px] w-[214.83px]">Expert assistance available anytime,anywhere.</p></div>
-         </div>
-      </div>
-    
-    </section>
+          <!-- other icon div -->
+          <div
+            class="w-[599px] grid grid-cols-2 gap-[21.78px] translate-y-[50px] group-hover:translate-y-0 transition-transform duration-300 ease-in-out"
+          >
+            <div
+              class="w-[288.21px] h-[303.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#0191c3] rounded-[20.79px]"
+            >
+              <img src="./assets/img/location.svg" alt="location" />
+              <p
+                class="font-poppins font-semibold text-center text-[#FFFFFF] text-[16.59px] w-[214.83px]"
+              >
+                Tailored itineraries to match your unique preferences.
+              </p>
+            </div>
+            <div
+              class="w-[288.21px] h-[303.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#d64a17] rounded-[20.79px]"
+            >
+              <img src="./assets/img/plane.svg" alt="plane" />
+              <p
+                class="font-poppins font-semibold text-center text-[#FFFFFF] text-[16.59px] w-[214.83px]"
+              >
+                Seamless bookings for flights and accomodations worldwide.
+              </p>
+            </div>
+            <div
+              class="w-[288.21px] h-[303.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#469325] rounded-[20.79px]"
+            >
+              <img src="./assets/img/shield.svg" alt="shield" />
+              <p
+                class="font-poppins font-semibold text-center text-[#FFFFFF] text-[16.59px] w-[214.83px]"
+              >
+                Comprehensive coverage for a worry-free journey.
+              </p>
+            </div>
+            <div
+              class="w-[288.21px] h-[303.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#626262] rounded-[20.79px]"
+            >
+              <img src="./assets/img/phone.svg" alt="phone" />
+              <p
+                class="font-poppins font-semibold text-center text-[#FFFFFF] text-[16.59px] w-[214.83px]"
+              >
+                Expert assistance available anytime,anywhere.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section></section>
       <section></section>
       <section></section>
