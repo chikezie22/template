@@ -4,6 +4,7 @@ const nextButton = document.getElementById("next-button");
 
 let currentIndex = 0;
 const images = sliderContainer.children;
+console.log(images);
 
 // Dynamically determine how many images to show per slide
 const imagesPerSlide = () => {
@@ -15,9 +16,7 @@ const imagesPerSlide = () => {
 // Update the slider position and button visibility
 const updateSlider = () => {
   const slideWidth = sliderContainer.offsetWidth / imagesPerSlide();
-  sliderContainer.style.transform = `translateX(-${
-    currentIndex * slideWidth
-  }px)`;
+  sliderContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 
   // Hide the "prev" button on the first slide
   prevButton.style.display = currentIndex === 0 ? "none" : "block";
