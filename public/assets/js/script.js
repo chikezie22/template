@@ -1,9 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.getElementById("slider");
+  const sliderRomance = document.getElementById("slider-2");
   const nextButton = document.getElementById("next-button");
   const prevButton = document.getElementById("prev-button");
   const slides = slider.children;
+  const slidesRomance = sliderRomance.children;
+  console.log(slidesRomance);
   const slide3images = getSlidesToShow();
+  let index = 0;
+
+  // function to slide the sliderRomance;
+  const autoSlide = () => {
+    const slideWidth = slidesRomance[0].offsetWidth;
+    const gap = 8;
+    index++;
+
+    if (index >= slidesRomance.length - 1) {
+      index = 0;
+      sliderRomance.style.transition = `none`;
+      sliderRomance.style.transform = `translateX(0px)`;
+      // force a reflow
+      sliderRomance.offsetHeight;
+    } else {
+      const offset = slideWidth + gap;
+      sliderRomance.style.scrollBehavior = `smooth`;
+      sliderRomance.style.transform = `translateX(${-index * offset}px)`;
+    }
+  };
 
   function getSlidesToShow() {
     if (window.innerWidth < 768) {
@@ -61,4 +84,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initial setup
   updateButtons();
+  setInterval(autoSlide, 5000);
 });

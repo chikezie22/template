@@ -626,20 +626,28 @@ video {
   right: 1rem;
 }
 
+.top-1\/2{
+  top: 50%;
+}
+
 .top-\[-50px\]{
   top: -50px;
 }
 
-.top-\[60\%\]{
-  top: 60%;
+.bottom-0{
+  bottom: 0px;
 }
 
-.top-\[50\%\]{
-  top: 50%;
+.bottom-\[10px\]{
+  bottom: 10px;
 }
 
-.top-1\/2{
-  top: 50%;
+.bottom-\[10\%\]{
+  bottom: 10%;
+}
+
+.left-1\/2{
+  left: 50%;
 }
 
 .z-10{
@@ -651,24 +659,12 @@ video {
   margin-right: auto;
 }
 
-.block{
-  display: block;
-}
-
-.inline-block{
-  display: inline-block;
-}
-
 .flex{
   display: flex;
 }
 
 .grid{
   display: grid;
-}
-
-.hidden{
-  display: none;
 }
 
 .h-\[147px\]{
@@ -743,20 +739,16 @@ video {
   height: 100vh;
 }
 
-.h-\[300px\]{
-  height: 300px;
-}
-
 .min-h-\[48px\]{
   min-height: 48px;
 }
 
-.min-h-\[869px\]{
-  min-height: 869px;
-}
-
 .min-h-\[508px\]{
   min-height: 508px;
+}
+
+.min-h-\[869px\]{
+  min-height: 869px;
 }
 
 .w-\[1062px\]{
@@ -795,10 +787,6 @@ video {
   width: 339px;
 }
 
-.w-\[391px\]{
-  width: 391px;
-}
-
 .w-\[394px\]{
   width: 394px;
 }
@@ -819,16 +807,12 @@ video {
   width: 599px;
 }
 
+.w-\[95vw\]{
+  width: 95vw;
+}
+
 .w-\[980px\]{
   width: 980px;
-}
-
-.w-full{
-  width: 100%;
-}
-
-.w-1\/3{
-  width: 33.333333%;
 }
 
 .w-fit{
@@ -836,12 +820,8 @@ video {
   width: fit-content;
 }
 
-.w-\[1193px\]{
-  width: 1193px;
-}
-
-.w-\[95vw\]{
-  width: 95vw;
+.w-full{
+  width: 100%;
 }
 
 .min-w-\[121\.83px\]{
@@ -850,10 +830,6 @@ video {
 
 .min-w-\[1400px\]{
   min-width: 1400px;
-}
-
-.max-w-\[1198px\]{
-  max-width: 1198px;
 }
 
 .max-w-\[1193px\]{
@@ -868,21 +844,8 @@ video {
   flex-shrink: 0;
 }
 
-.flex-grow-0{
-  flex-grow: 0;
-}
-
-.basis-\[391px\]{
-  flex-basis: 391px;
-}
-
 .origin-top{
   transform-origin: top;
-}
-
-.translate-y-\[50px\]{
-  --tw-translate-y: 50px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .-translate-y-1\/2{
@@ -890,8 +853,14 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.grid-flow-col{
-  grid-auto-flow: column;
+.translate-y-\[50px\]{
+  --tw-translate-y: 50px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .grid-cols-2{
@@ -900,10 +869,6 @@ video {
 
 .grid-cols-\[462px_1fr\]{
   grid-template-columns: 462px 1fr;
-}
-
-.grid-cols-3{
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -938,10 +903,6 @@ video {
   gap: 10px;
 }
 
-.gap-\[12px\]{
-  gap: 12px;
-}
-
 .gap-\[20\.79px\]{
   gap: 20.79px;
 }
@@ -968,10 +929,6 @@ video {
 
 .gap-\[8px\]{
   gap: 8px;
-}
-
-.gap-\[5px\]{
-  gap: 5px;
 }
 
 .self-start{
@@ -1049,11 +1006,6 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-red-900{
-  --tw-bg-opacity: 1;
-  background-color: rgb(127 29 29 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-30{
@@ -1135,6 +1087,11 @@ video {
 .py-\[50px\]{
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.px-\[10px\]{
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .text-left{
@@ -1270,11 +1227,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.text-red-900{
-  --tw-text-opacity: 1;
-  color: rgb(127 29 29 / var(--tw-text-opacity, 1));
-}
-
 .opacity-50{
   opacity: 0.5;
 }
@@ -1283,14 +1235,6 @@ video {
   --tw-backdrop-blur: blur(5px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
-.transition{
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 .transition-transform{
@@ -1311,6 +1255,10 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.ease-linear{
+  transition-timing-function: linear;
+}
+
 .group:hover .group-hover\:h-\[631\.845px\]{
   height: 631.845px;
 }
@@ -1320,49 +1268,14 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-@media (min-width: 640px){
-  .sm\:w-\[95\%\]{
-    width: 95%;
-  }
-}
-
 @media (min-width: 768px){
-  .md\:h-\[330px\]{
-    height: 330px;
-  }
-
-  .md\:w-1\/2{
-    width: 50%;
-  }
-
   .md\:w-\[calc\(50\%-5px\)\]{
     width: calc(50% - 5px);
-  }
-
-  .md\:w-\[45\%\]{
-    width: 45%;
-  }
-
-  .md\:text-lg{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 }
 
 @media (min-width: 1024px){
-  .lg\:h-\[361px\]{
-    height: 361px;
-  }
-
-  .lg\:w-1\/3{
-    width: 33.333333%;
-  }
-
   .lg\:w-\[391px\]{
     width: 391px;
-  }
-
-  .lg\:text-\[20px\]{
-    font-size: 20px;
   }
 }
