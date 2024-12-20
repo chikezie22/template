@@ -1,46 +1,64 @@
-const sliderContainer = document.getElementById("slider-container");
-const prevButton = document.getElementById("prev-button");
-const nextButton = document.getElementById("next-button");
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.getElementById("slider");
+  const nextButton = document.getElementById("next-button");
+  const prevButton = document.getElementById("prev-button");
+  const slides = slider.children;
+  const slide3images = getSlidesToShow();
 
-let currentIndex = 0;
-const images = sliderContainer.children;
-console.log(images);
+  function getSlidesToShow() {
+    if (window.innerWidth < 768) {
+      return 1; // Mobile: 1 slide
+    } else if (window.innerWidth < 1024) {
+      return 2; // Tablet: 2 slides
+    }
+    return 3; // Desktop: 3 slides
+  }
 
-// Dynamically determine how many images to show per slide
-const imagesPerSlide = () => {
-  if (window.innerWidth >= 1024) return 3; // Large screens
-  if (window.innerWidth >= 640) return 2; // Medium screens
-  return 1; // Small screens
-};
+  let currentIndex = 0;
+  let slidesToShow = getSlidesToShow();
 
-// Update the slider position and button visibility
-const updateSlider = () => {
-  const slideWidth = sliderContainer.offsetWidth / imagesPerSlide();
-  sliderContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  function updateSliderPosition() {
+    const slideWidth = slides[0].offsetWidth;
+    const gap = 10;
+    const offset = slideWidth + gap;
+    slider.style.transform = `translateX(${-currentIndex * offset}px)`;
+  }
 
-  // Hide the "prev" button on the first slide
-  prevButton.style.display = currentIndex === 0 ? "none" : "block";
+  function updateButtons() {
+    prevButton.style.display = currentIndex === 0 ? "none" : "block";
+    nextButton.style.display = currentIndex >= slides.length - slidesToShow ? "none" : "block";
+  }
 
-  // Hide the "next" button when there are no more slides to show
-  const totalSlides = Math.ceil(images.length / imagesPerSlide());
-  nextButton.style.display = currentIndex >= totalSlides - 1 ? "none" : "block";
-};
+  nextButton.addEventListener("click", function () {
+    if (currentIndex < slides.length - slidesToShow) {
+      currentIndex += slide3images;
+      updateSliderPosition();
+      updateButtons();
+    }
+  });
 
-// Move to the next slide
-nextButton.addEventListener("click", () => {
-  const totalSlides = Math.ceil(images.length / imagesPerSlide());
-  currentIndex = Math.min(currentIndex + 1, totalSlides - 1);
-  updateSlider();
+  prevButton.addEventListener("click", function () {
+    if (currentIndex > 0) {
+      currentIndex -= slide3images;
+      updateSliderPosition();
+      updateButtons();
+    }
+  });
+
+  // Handle window resize
+  let resizeTimer;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      slidesToShow = getSlidesToShow();
+      if (currentIndex > slides.length - slidesToShow) {
+        currentIndex = slides.length - slidesToShow;
+      }
+      updateSliderPosition();
+      updateButtons();
+    }, 250);
+  });
+
+  // Initial setup
+  updateButtons();
 });
-
-// Move to the previous slide
-prevButton.addEventListener("click", () => {
-  currentIndex = Math.max(currentIndex - 1, 0);
-  updateSlider();
-});
-
-// Recalculate and update on window resize
-window.addEventListener("resize", updateSlider);
-
-// Initialize
-updateSlider();

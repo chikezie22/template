@@ -93,7 +93,7 @@
       </div>
     </header>
     <main class="relative w-full">
-      <div class="relative w-full h-[508px]">
+      <div class="relative w-full min-h-[508px]">
         <section class="h-[508px] w-[1197px] mx-auto absolute inset-0 top-[-50px]">
           <div
             class="w-[1062px] h-[147px] rounded-[20px] px-[30px] flex flex-col gap-2 justify-center items-center mx-auto bg-white"
@@ -103,14 +103,16 @@
               An incredible calm has completely embraced me.
             </p>
           </div>
-          <div
-            class="max-w-[1198px] h-[361px] flex justify-center gap-[12px] overflow-hidden relative"
-          >
+          <!-- Parent container to constrain width and handle overflow -->
+          <div class="max-w-[1193px] relative overflow-clip w-full mx-auto">
             <div
-              class="flex overflow-hidden gap-[10px] transition ease-in-out duration-500"
-              id="slider-container"
+              class="flex gap-[10px] transition-transform duration-500 ease-in-out w-fit"
+              id="slider"
             >
-              <div class="basis-[391px] h-[361px] overflow-hidden relative rounded-[20px]">
+              <!-- Image 1 -->
+              <div
+                class="flex-shrink-0 h-[361px] w-[95vw] md:w-[calc(50%-5px)] lg:w-[391px] overflow-hidden rounded-[20px] relative"
+              >
                 <img
                   class="w-full h-full object-cover"
                   src="./assets/img/work-1.webp"
@@ -120,14 +122,16 @@
                   class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"
                 ></div>
                 <p
-                  class="absolute bottom-[20px] left-[20px] right-0 text-left font-montserrat p-2 text-white text-[20px] font-bold"
+                  class="absolute bottom-[20px] left-[20px] right-0 text-left font-montserrat p-2 text-white text-[20px] font-bold w-fit"
                 >
                   Dubai, UAE
                 </p>
               </div>
 
-              <!-- ***************************************************************************************************** -->
-              <div class="w-[391px] h-[361px] overflow-hidden relative rounded-[20px]">
+              <!-- Image 2 -->
+              <div
+                class="flex-shrink-0 h-[361px] w-[95vw] md:w-[calc(50%-5px)] lg:w-[391px] overflow-hidden rounded-[20px] relative"
+              >
                 <img
                   class="w-full h-full object-cover"
                   src="./assets/img/work-2.webp"
@@ -137,13 +141,16 @@
                   class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"
                 ></div>
                 <p
-                  class="absolute bottom-[20px] left-[20px] right-0 text-left font-montserrat p-2 text-white text-[20px] font-bold"
+                  class="absolute bottom-[20px] left-[20px] right-0 text-left font-montserrat p-2 text-white text-[20px] font-bold w-fit"
                 >
                   Rome, Italy
                 </p>
               </div>
-              <!-- another image -->
-              <div class="w-[391px] h-[361px] overflow-hidden relative rounded-[20px]">
+
+              <!-- Image 3 -->
+              <div
+                class="flex-shrink-0 h-[361px] w-[95vw] md:w-[calc(50%-5px)] lg:w-[391px] overflow-hidden rounded-[20px] relative"
+              >
                 <img
                   class="w-full h-full object-cover"
                   src="./assets/img/work-3.webp"
@@ -153,13 +160,16 @@
                   class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"
                 ></div>
                 <p
-                  class="absolute bottom-[20px] left-[20px] right-0 text-left font-montserrat p-2 text-white text-[20px] font-bold"
+                  class="absolute bottom-[20px] left-[20px] right-0 text-left font-montserrat p-2 text-white text-[20px] font-bold w-fit"
                 >
                   Ball, Indonesia
                 </p>
               </div>
-              <!-- another image -->
-              <div class="w-[391px] h-[361px] overflow-hidden relative rounded-[20px]">
+
+              <!-- Image 4 -->
+              <div
+                class="flex-shrink-0 h-[361px] w-[95vw] md:w-[calc(50%-5px)] lg:w-[391px] overflow-hidden rounded-[20px] relative"
+              >
                 <img
                   class="w-full h-full object-cover"
                   src="./assets/img/work-4.webp"
@@ -174,8 +184,11 @@
                   Paris, France
                 </p>
               </div>
+
               <!-- another image -->
-              <div class="w-[391px] h-[361px] overflow-hidden relative rounded-[20px]">
+              <div
+                class="flex-shrink-0 h-[361px] w-[95vw] md:w-[calc(50%-5px)] lg:w-[391px] overflow-hidden rounded-[20px] relative"
+              >
                 <img
                   class="w-full h-full object-cover"
                   src="./assets/img/work-5.jpeg"
@@ -191,7 +204,9 @@
                 </p>
               </div>
               <!-- another image -->
-              <div class="w-[391px] h-[361px] overflow-hidden relative rounded-[20px]">
+              <div
+                class="flex-shrink-0 h-[361px] w-[95vw] md:w-[calc(50%-5px)] lg:w-[391px] overflow-hidden rounded-[20px] relative"
+              >
                 <img
                   class="w-full h-full object-cover"
                   src="./assets/img/work-6.jpeg"
@@ -208,7 +223,9 @@
               </div>
               <!-- another image -->
 
-              <div class="w-[391px] h-[361px] overflow-hidden relative rounded-[20px]">
+              <div
+                class="flex-shrink-0 h-[361px] w-[95vw] md:w-[calc(50%-5px)] lg:w-[391px] overflow-hidden rounded-[20px] relative"
+              >
                 <img
                   class="w-full h-full object-cover"
                   src="./assets/img/work-7.webp"
@@ -224,7 +241,9 @@
                 </p>
               </div>
               <!-- another image -->
-              <div class="w-[391px] h-[361px] overflow-hidden relative rounded-[20px]">
+              <div
+                class="flex-shrink-0 h-[361px] w-[95vw] md:w-[calc(50%-5px)] lg:w-[391px] overflow-hidden rounded-[20px] relative"
+              >
                 <img
                   class="w-full h-full object-cover"
                   src="./assets/img/work-8.webp"
@@ -240,7 +259,9 @@
                 </p>
               </div>
               <!-- another image -->
-              <div class="w-[391px] h-[361px] overflow-hidden relative rounded-[20px]">
+              <div
+                class="flex-shrink-0 h-[361px] w-[95vw] md:w-[calc(50%-5px)] lg:w-[391px] overflow-hidden rounded-[20px] relative"
+              >
                 <img
                   class="w-full h-full object-cover"
                   src="./assets/img/work-9.jpeg"
@@ -256,7 +277,9 @@
                 </p>
               </div>
               <!-- another image -->
-              <div class="w-[391px] h-[361px] overflow-hidden relative rounded-[20px]">
+              <div
+                class="flex-shrink-0 h-[361px] w-[95vw] md:w-[calc(50%-5px)] lg:w-[391px] overflow-hidden rounded-[20px] relative"
+              >
                 <img
                   class="w-full h-full object-cover"
                   src="./assets/img/work-10.webp"
@@ -272,7 +295,9 @@
                 </p>
               </div>
 
-              <div class="w-[391px] h-[361px] overflow-hidden relative rounded-[20px]">
+              <div
+                class="flex-shrink-0 h-[361px] w-[95vw] md:w-[calc(50%-5px)] lg:w-[391px] overflow-hidden rounded-[20px] relative"
+              >
                 <img
                   class="w-full h-full object-cover"
                   src="./assets/img/work-11.webp"
@@ -288,7 +313,9 @@
                 </p>
               </div>
 
-              <div class="w-[391px] h-[361px] overflow-hidden relative rounded-[20px]">
+              <div
+                class="flex-shrink-0 h-[361px] w-[95vw] md:w-[calc(50%-5px)] lg:w-[391px] overflow-hidden rounded-[20px] relative"
+              >
                 <img
                   class="w-full h-full object-cover"
                   src="./assets/img/work-12.jpeg"
@@ -304,15 +331,15 @@
                 </p>
               </div>
             </div>
-          </div>
 
-          <span class="absolute top-[60%] left-3" id="prev-button">
-            <img src="./assets/img/left.svg" alt="left" />
-          </span>
-          <span class="absolute top-[60%] right-4" id="next-button">
-            <img src="./assets/img/right.svg" alt="right" />
-          </span>
-          <!-- This closes the div with class "max-w-[1198px] h-[361px] flex justify-center gap-[12px] overflow-hidden relative" -->
+            <!-- Navigation buttons - moved outside slider but inside container -->
+            <button class="absolute top-1/2 -translate-y-1/2 left-3 z-10" id="prev-button">
+              <img src="./assets/img/left.svg" alt="left" />
+            </button>
+            <button class="absolute top-1/2 -translate-y-1/2 right-4 z-10" id="next-button">
+              <img src="./assets/img/right.svg" alt="right" />
+            </button>
+          </div>
         </section>
       </div>
       <section class="min-h-[869px] w-full mx-auto gap-[30px]">
@@ -378,6 +405,7 @@
           </div>
         </div>
       </section>
+
       <section class="w-full mx-auto">
         <div
           class="w-[1221px] mx-auto h-[595px] grid grid-cols-[462px_1fr] place-items-center gap-2"
@@ -499,6 +527,7 @@
           </div>
         </div>
       </section>
+
       <section></section>
       <section></section>
       <section></section>
