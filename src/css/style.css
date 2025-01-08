@@ -8,3 +8,47 @@
     font-family: "Bebas Neue", sans-serif;
   }
 }
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.carousel-slide-in {
+  animation: slideInFromRight 1s ease forwards;
+}
+
+.carousel-slide-out {
+  animation: slideOutToLeft 1s ease forwards;
+}
+
+/* .carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+} */
+
+.carousel-slide-in {
+  opacity: 1;
+  pointer-events: all;
+}
