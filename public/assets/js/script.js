@@ -82,6 +82,56 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 250);
   });
 
+  // Blur image carousel testimonial
+  // const items = document.querySelectorAll(".carousel-item");
+  // let otherIndex = 0;
+
+  // function showSlide(index) {
+  //   items.forEach((item, i) => {
+  //     if (i === index) {
+  //       item.classList.add("active");
+  //       item.classList.remove("hidden");
+  //     } else {
+  //       item.classList.remove("active");
+  //       item.classList.add("hidden");
+  //     }
+  //   });
+  // }
+
+  // function nextSlide() {
+  //   otherIndex = (otherIndex + 1) % items.length;
+  //   showSlide(otherIndex);
+  // }
+
+  // Auto-transition every 5 seconds
+  // setInterval(nextSlide, 5000);
+
+  const track = document.querySelector(".carousel-track");
+  const groups = document.querySelectorAll(".carousel-track > div");
+  const groupWidth = 1193; // Width of each group
+  let carouselIndex = 0;
+
+  // Function to slide the carousel
+  function slideCarousel() {
+    carouselIndex = (carouselIndex + 1) % groups.length; // Loop back to the first group after the last
+    track.style.transition = "transform 0.5s ease"; // Add smooth transition for sliding
+    track.style.transform = `translateX(-${carouselIndex * groupWidth}px)`; // Move carousel to the next image
+  }
+
+  // Slide every 3 seconds
+  setInterval(slideCarousel, 3000);
+
+  // Restart the carousel loop from the first image after the last image
+  track.addEventListener("transitionend", () => {
+    if (carouselIndex === groups.length - 1) {
+      setTimeout(() => {
+        track.style.transition = "none"; // Disable transition while resetting position
+        track.style.transform = "translateX(0)"; // Reset to the first image
+        carouselIndex = 0; // Reset the index to the first image
+      }, 2000); // Wait for the sliding to complete before resetting
+    }
+  });
+
   // Initial setup
   updateButtons();
   setInterval(autoSlide, 5000);
