@@ -136,21 +136,3 @@ document.addEventListener("DOMContentLoaded", function () {
   updateButtons();
   setInterval(autoSlide, 5000);
 });
-
-const carousels = document.querySelectorAll(".carousel-item");
-let currentIndex = 0;
-
-function updateCarousel() {
-  carousels.forEach((item, index) => {
-    item.classList.remove("carousel-slide-in", "carousel-slide-out");
-    if (index === currentIndex) {
-      item.classList.add("carousel-slide-in");
-    } else {
-      item.classList.add("carousel-slide-out");
-    }
-  });
-
-  currentIndex = (currentIndex + 1) % carousels.length;
-}
-
-setInterval(updateCarousel, 3000); // Change every 3 seconds
