@@ -556,10 +556,6 @@ video {
   display: none;
 }
 
-.bebas {
-  font-family: "Bebas Neue", sans-serif;
-}
-
 .container{
   width: 100%;
 }
@@ -592,6 +588,10 @@ video {
   .container{
     max-width: 1536px;
   }
+}
+
+.bebas {
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .absolute{
@@ -707,6 +707,10 @@ video {
   height: 303.89px;
 }
 
+.h-\[331px\]{
+  height: 331px;
+}
+
 .h-\[34\.52px\]{
   height: 34.52px;
 }
@@ -717,6 +721,10 @@ video {
 
 .h-\[361px\]{
   height: 361px;
+}
+
+.h-\[365\.18px\]{
+  height: 365.18px;
 }
 
 .h-\[393\.02px\]{
@@ -733,6 +741,10 @@ video {
 
 .h-\[508px\]{
   height: 508px;
+}
+
+.h-\[518px\]{
+  height: 518px;
 }
 
 .h-\[521px\]{
@@ -801,6 +813,10 @@ video {
 
 .w-\[1062px\]{
   width: 1062px;
+}
+
+.w-\[1188px\]{
+  width: 1188px;
 }
 
 .w-\[1193px\]{
@@ -883,10 +899,6 @@ video {
   width: 95vw;
 }
 
-.w-\[980px\]{
-  width: 980px;
-}
-
 .w-fit{
   width: -moz-fit-content;
   width: fit-content;
@@ -948,8 +960,18 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.appearance-none{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-cols-\[462px_1fr\]{
@@ -964,12 +986,20 @@ video {
   place-items: center;
 }
 
+.items-start{
+  align-items: flex-start;
+}
+
 .items-end{
   align-items: flex-end;
 }
 
 .items-center{
   align-items: center;
+}
+
+.justify-start{
+  justify-content: flex-start;
 }
 
 .justify-center{
@@ -1004,6 +1034,10 @@ video {
   gap: 21.78px;
 }
 
+.gap-\[21px\]{
+  gap: 21px;
+}
+
 .gap-\[30px\]{
   gap: 30px;
 }
@@ -1024,6 +1058,17 @@ video {
   gap: 8px;
 }
 
+.gap-x-\[10px\]{
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+.space-x-1 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .self-start{
   align-self: flex-start;
 }
@@ -1034,6 +1079,10 @@ video {
 
 .overflow-clip{
   overflow: clip;
+}
+
+.overflow-visible{
+  overflow: visible;
 }
 
 .overflow-x-clip{
@@ -1066,6 +1115,11 @@ video {
 
 .border{
   border-width: 1px;
+}
+
+.border-gray-300{
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
 }
 
 .border-slate-300{
@@ -1172,6 +1226,10 @@ video {
 
 .p-2{
   padding: 0.5rem;
+}
+
+.p-\[30px\]{
+  padding: 30px;
 }
 
 .px-\[10px\]{
@@ -1354,6 +1412,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.placeholder-gray-300::-moz-placeholder{
+  --tw-placeholder-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-placeholder-opacity, 1));
+}
+
+.placeholder-gray-300::placeholder{
+  --tw-placeholder-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-placeholder-opacity, 1));
+}
+
 .opacity-50{
   opacity: 0.5;
 }
@@ -1406,6 +1474,38 @@ video {
 
 .ease-linear{
   transition-timing-function: linear;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[type='date'] {
+  -moz-appearance: textfield;
+  /* For Firefox */
+  -webkit-appearance: none;
+          appearance: none;
+  /* Ensures consistency across browsers */
+}
+
+input[type='date']::-webkit-datetime-edit {
+  color: gray;
+}
+
+.focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:ring-2:focus{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-blue-500:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity, 1));
 }
 
 .group:hover .group-hover\:h-\[631\.845px\]{

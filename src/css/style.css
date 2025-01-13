@@ -3,8 +3,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer components {
   .bebas {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+}
+
+@layer utilities {
+  input[type='date']::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+  input[type='date'] {
+    -moz-appearance: textfield; /* For Firefox */
+    appearance: none; /* Ensures consistency across browsers */
+  }
+
+  input[type='date']::-webkit-datetime-edit {
+    color: gray;
   }
 }
