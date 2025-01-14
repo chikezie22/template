@@ -671,6 +671,10 @@ video {
   margin-bottom: 100px;
 }
 
+.mb-\[27px\]{
+  margin-bottom: 27px;
+}
+
 .flex{
   display: flex;
 }
@@ -789,6 +793,10 @@ video {
 
 .h-screen{
   height: 100vh;
+}
+
+.h-\[713px\]{
+  height: 713px;
 }
 
 .min-h-\[48px\]{
@@ -910,6 +918,14 @@ video {
 
 .w-\[322px\]{
   width: 322px;
+}
+
+.w-\[1440px\]{
+  width: 1440px;
+}
+
+.w-\[725px\]{
+  width: 725px;
 }
 
 .min-w-\[121\.83px\]{
@@ -1062,6 +1078,10 @@ video {
   gap: 8px;
 }
 
+.gap-\[15px\]{
+  gap: 15px;
+}
+
 .gap-x-\[10px\]{
   -moz-column-gap: 10px;
        column-gap: 10px;
@@ -1071,6 +1091,18 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-\[8px\] > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(8px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(8px * var(--tw-space-y-reverse));
+}
+
+.divide-y-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(2px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
 }
 
 .self-start{
@@ -1091,6 +1123,14 @@ video {
 
 .overflow-x-clip{
   overflow-x: clip;
+}
+
+.text-wrap{
+  text-wrap: wrap;
+}
+
+.text-pretty{
+  text-wrap: pretty;
 }
 
 .rounded-\[20\.79px\]{
@@ -1174,6 +1214,11 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#1e1e1e\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 30 30 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-30{
