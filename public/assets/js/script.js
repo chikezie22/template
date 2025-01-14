@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevButton = document.getElementById("prev-button");
   const slides = slider.children;
   const slidesRomance = sliderRomance.children;
-  console.log(slidesRomance);
   const slide3images = getSlidesToShow();
   let index = 0;
 
@@ -82,30 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 250);
   });
 
-  // Blur image carousel testimonial
-  // const items = document.querySelectorAll(".carousel-item");
-  // let otherIndex = 0;
-
-  // function showSlide(index) {
-  //   items.forEach((item, i) => {
-  //     if (i === index) {
-  //       item.classList.add("active");
-  //       item.classList.remove("hidden");
-  //     } else {
-  //       item.classList.remove("active");
-  //       item.classList.add("hidden");
-  //     }
-  //   });
-  // }
-
-  // function nextSlide() {
-  //   otherIndex = (otherIndex + 1) % items.length;
-  //   showSlide(otherIndex);
-  // }
-
-  // Auto-transition every 5 seconds
-  // setInterval(nextSlide, 5000);
-
   const track = document.querySelector(".carousel-track");
   const groups = document.querySelectorAll(".carousel-track > div");
   const groupWidth = 1193; // Width of each group
@@ -132,7 +107,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // animation for looping through the words.
+  const wanderlust = document.getElementById("wanderlust");
+  const alphabets = wanderlust.children;
+  let letterIndex = 0;
+  const animateText = () => {
+    for (letter of alphabets) {
+      letter.classList.remove("animate-scaleY");
+    }
+    alphabets[letterIndex].classList.add("animate-scaleY");
+    letterIndex = (letterIndex + 1) % alphabets.length;
+    setTimeout(animateText, 1000);
+  };
+
   // Initial setup
+  animateText();
   updateButtons();
   setInterval(autoSlide, 5000);
 });

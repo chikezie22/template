@@ -5,20 +5,87 @@
 
 @layer components {
   .bebas {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: "Bebas Neue", sans-serif;
   }
 }
 
 @layer utilities {
-  input[type='date']::-webkit-calendar-picker-indicator {
+  input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
   }
-  input[type='date'] {
+  input[type="date"] {
     -moz-appearance: textfield; /* For Firefox */
     appearance: none; /* Ensures consistency across browsers */
   }
 
-  input[type='date']::-webkit-datetime-edit {
+  input[type="date"]::-webkit-datetime-edit {
     color: gray;
   }
+
+  /* @keyframes slideRight {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(90%);
+    }
+  }
+
+  .slideRight {
+    animation: slideRight 0.5s 1s ease-in-out infinite alternate;
+  } */
+
+  @keyframes slideRight {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(50%);
+    }
+    95% {
+      transform: translateX(50%); /* Pause */
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes colorChange {
+    0% {
+      fill: #ffa500;
+    }
+    50% {
+      fill: #b07404;
+    }
+    95% {
+      fill: #b07404; /* Pause */
+    }
+    100% {
+      fill: #ffa500;
+    }
+  }
+
+  .slide-right svg {
+    animation: slideRight 2s linear infinite;
+  }
+
+  .slide-right svg rect {
+    animation: colorChange 2s linear infinite;
+  }
+}
+
+@keyframes scaleY {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  90% {
+    transform: scaleY(1.5);
+  }
+}
+
+.animate-scaleY {
+  animation: scaleY 1s ease-in-out;
+  transform-origin: top;
 }
