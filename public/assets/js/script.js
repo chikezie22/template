@@ -121,7 +121,10 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // Initial setup
-  animateText();
+  if (window.innerWidth > 768) {
+    animateText();
+  }
+
   updateButtons();
   setInterval(autoSlide, 5000);
 });

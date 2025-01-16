@@ -23,13 +23,14 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
-  <body class="h-screen grid min-w-[1400px] mx-auto">
-    <header class="relative w-full h-[750px] flex flex-col gap-[71px]">
+  <body class="min-h-screen overflow-x-clip relative">
+    <header class="relative w-full sm:min-h-screen min-h-[70dvh]">
       <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
         <source src="./assets/video/video.mp4" type="video/mp4" />
       </video>
       <div class="relative z-10 w-full bg-gradient-to-r from-[#1E1E1E80] to-[#48484880] backdrop-blur-[5px]">
-        <nav class="flex justify-between items-center h-[68px] px-[40px] py-[16px] w-[1198px] mx-auto text-white">
+        <nav
+          class="flex justify-between items-center h-[68px] px-[40px] py-[16px] max-w-[1198px] mx-auto text-white w-full">
           <div class="flex items-center gap-[10px] min-w-[121.83px] h-[34.52px]">
             <img src="./assets/img/Logo.svg" alt="" width="39.83px" height="34.52px" />
 
@@ -48,12 +49,19 @@
         </nav>
       </div>
       <!-- Other header Content in the header ------------------------------------------------------- -->
-      <div class="relative z-10 w-full h-[545.18px] flex flex-col justify-center items-center text-[#fff]">
-        <p class="font-montserrat font-normal text-[30.67px]">Unforgettable experiences tailored for you</p>
-        <div class="flex flex-col gap-[53px] w-[1212.76px] justify-center items-center">
+      <div
+        class="relative z-10 w-full min-h-full flex flex-col sm:mt-[71px] mt-[50px] items-center text-white px-4 sm:px-8 gap-[31px]">
+        <!-- Title -->
+        <p class="font-montserrat font-normal text-lg sm:text-xl md:text-2xl lg:text-[30.67px] text-center">
+          Unforgettable experiences tailored for you
+        </p>
+
+        <!-- Content Container -->
+        <div class="flex flex-col gap-8 sm:gap-[53px] w-full max-w-[1212.76px] justify-between items-center h-full">
+          <!-- Gradient Text -->
           <div
             id="wanderlust"
-            class="flex text-[243.33px] items-end justify-center font-normal bebas bg-gradient-to-b from-[#FFFFFF] to-[#828282] text-transparent bg-clip-text leading-none h-[365.18px] overflow-visible space-x-1">
+            class="flex text-[clamp(4.063rem,-0.224rem+17.147vw,15.208rem)] items-end justify-center font-normal bebas bg-gradient-to-b from-[#FFFFFF] to-[#828282] text-transparent bg-clip-text leading-none h-auto overflow-visible space-x-1 text-center">
             <div class="origin-top bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-transparent">W</div>
             <div class="origin-top bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-transparent">A</div>
             <div class="origin-top bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-transparent">N</div>
@@ -66,7 +74,9 @@
             <div class="origin-top bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-transparent">T</div>
           </div>
 
-          <button class="flex w-[180px] gap-[8px] items-center justify-center border border-slate-300 rounded-md p-2">
+          <!-- Button -->
+          <button
+            class="flex w-auto px-4 sm:px-6 py-2 gap-2 items-center justify-center border border-slate-300 rounded-md text-sm sm:text-base">
             Explore Now
             <span class="slide-right">
               <svg
@@ -81,18 +91,16 @@
                   d="M22.5657 15.7503C22.8781 15.4378 22.8781 14.9313 22.5657 14.6189L17.4745 9.52772C17.1621 9.2153 16.6556 9.2153 16.3431 9.52772C16.0307 9.84014 16.0307 10.3467 16.3431 10.6591L20.8686 15.1846L16.3431 19.7101C16.0307 20.0225 16.0307 20.529 16.3431 20.8414C16.6556 21.1538 17.1621 21.1538 17.4745 20.8414L22.5657 15.7503ZM8 15.9846H22V14.3846H8V15.9846Z"
                   fill="white" />
               </svg>
-
-              <!-- <img src="./assets/img/arrow-right.svg" alt="arrow-right" width="30px" height="30px" /> -->
             </span>
           </button>
         </div>
       </div>
     </header>
-    <main class="relative w-full">
+    <main class="relative w-full h-full">
       <div class="relative w-full min-h-[508px]">
-        <section class="h-[508px] w-[1197px] mx-auto absolute inset-0 top-[-50px]">
+        <section class="h-[508px] max-w-[1197px] mx-auto absolute inset-0 top-[-50px]">
           <div
-            class="w-[1062px] h-[147px] rounded-[20px] px-[30px] flex flex-col gap-2 justify-center items-center mx-auto bg-white">
+            class="max-w-[1062px] w-full h-[147px] rounded-[20px] px-[30px] flex flex-col gap-2 justify-center items-center mx-auto bg-white">
             <p class="font-montserrat font-bold text-[36px] text-[#1e1e1e]">Must-Visit</p>
             <p class="font-poppins font-normal text-[14px] text-[#7b7b7b]">
               An incredible calm has completely embraced me.
