@@ -24,7 +24,7 @@
     <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
   <body class="min-h-screen overflow-x-clip relative">
-    <header class="relative w-full sm:min-h-screen min-h-[70dvh]">
+    <header class="relative w-full sm:min-h-screen min-h-[80dvh]">
       <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
         <source src="./assets/video/video.mp4" type="video/mp4" />
       </video>
@@ -50,7 +50,7 @@
       </div>
       <!-- Other header Content in the header ------------------------------------------------------- -->
       <div
-        class="relative z-10 w-full min-h-full flex flex-col sm:mt-[71px] mt-[50px] items-center text-white px-4 sm:px-8 gap-[31px]">
+        class="relative z-10 w-full min-h-full flex flex-col sm:mt-[71px] mt-[8rem] items-center text-white px-4 sm:px-8 gap-[31px]">
         <!-- Title -->
         <p class="font-montserrat font-normal text-lg sm:text-xl md:text-2xl lg:text-[30.67px] text-center">
           Unforgettable experiences tailored for you
@@ -257,9 +257,9 @@
             Everything you need for a seamless travel experience.
           </p>
         </div>
-        <div class="flex gap-[30px] justify-center items-center group h-[631.85px]">
+        <div class="flex gap-[30px] flex-col lg:flex-row justify-center items-center group min-h-[631.85px] w-full">
           <div
-            class="w-[568px] h-[569px] rounded-[20px] overflow-hidden origin-top transition-height duration-300 ease-in-out group-hover:h-[631.845px] self-start">
+            class="max-w-[568px] mx-auto lg:mx-0 h-[569px] rounded-[20px] overflow-hidden origin-top transition-height duration-300 ease-in-out group-hover:h-[631.845px] self-start">
             <video autoplay muted loop class="w-full h-full object-cover">
               <source src="./assets/video/people.mp4" type="video/mp4" />
             </video>
@@ -267,7 +267,7 @@
 
           <!-- other icon div -->
           <div
-            class="w-[599px] grid grid-cols-2 gap-[21.78px] translate-y-[50px] group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+            class="min-w-[599px] grid grid-cols-1 place-items-center sm:grid-cols-2 gap-[21.78px] translate-y-[50px] group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
             <div
               class="w-[288.21px] h-[303.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#0191c3] rounded-[20.79px]">
               <img src="./assets/img/location.svg" alt="location" />
@@ -303,7 +303,7 @@
       <section class="w-full mx-auto">
         <div class="w-[1221px] mx-auto h-[595px] grid grid-cols-[462px_1fr] place-items-center gap-2">
           <div
-            class="w-[462px] h-[566px] bg-[#1E1E1E] flex-1 flex flex-col gap-[53px] py-[50px] px-[70px] text-[#ffffff] rounded-[20px]">
+            class="w-[462px] mx-auto lg:mx-0 h-[566px] bg-[#1E1E1E] flex-1 flex flex-col gap-[53px] py-[50px] px-[70px] text-[#ffffff] rounded-[20px]">
             <h2 class="font-montserrat font-bold text-[60px] text-center leading-[75px]">Popular Packages</h2>
             <p>
               Explore expertly curated travel packages designed for every traveler. From breathtaking escapes to
@@ -312,7 +312,7 @@
             </p>
             <button class="bg-[#ffa500] min-h-[48px] rounded-[5px] font-poppins text-base">Explore</button>
           </div>
-          <div class="h-[541px] w-full overflow-hidden">
+          <div class="h-[541px] w-full overflow-hidden hidden lg:block">
             <div class="flex gap-2 w-fit text-white transition-transform duration-300 ease-linear" id="slider-2">
               <!-- romance -img 1  -->
               <div class="w-[421px] h-[521px] rounded-[20px] relative overflow-hidden">

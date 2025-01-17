@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevButton = document.getElementById("prev-button");
   const slides = slider.children;
   const slidesRomance = sliderRomance.children;
-
+  const slide3images = getSlidesToShow();
   let index = 0;
 
   // function to slide the sliderRomance;
@@ -41,8 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateSliderPosition() {
     const slideWidth = slides[0].offsetWidth;
-    // const gap = 10;
-    const gap = parseInt(getComputedStyle(slider).gap) || 0;
+    const gap = 10;
     const offset = slideWidth + gap;
     slider.style.transform = `translateX(${-currentIndex * offset}px)`;
   }
@@ -54,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   nextButton.addEventListener("click", function () {
     if (currentIndex < slides.length - slidesToShow) {
-      currentIndex += slidesToShow;
+      currentIndex += slide3images;
       updateSliderPosition();
       updateButtons();
     }
@@ -62,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   prevButton.addEventListener("click", function () {
     if (currentIndex > 0) {
-      currentIndex -= slidesToShow;
+      currentIndex -= slide3images;
       updateSliderPosition();
       updateButtons();
     }
