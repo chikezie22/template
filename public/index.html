@@ -104,7 +104,7 @@
             <p class="font-montserrat font-bold text-[clamp(1.563rem,1.057rem+1.797vw,2.25rem)] text-[#1e1e1e]">
               Must-Visit
             </p>
-            <p class="font-poppins font-normal sm:text-[14px] text-[12px] text-[#7b7b7b]">
+            <p class="font-poppins font-normal sm:text-[16px] text-[14px] text-[#7b7b7b]">
               An incredible calm has completely embraced me.
             </p>
           </div>
@@ -253,7 +253,7 @@
           <p class="font-montserrat font-bold text-[clamp(1.563rem,1.057rem+1.797vw,2.25rem)]">
             Our Exceptional Services
           </p>
-          <p class="font-poppins font-normal sm:text-[16px] text-[12px] text-[#7B7B7B]">
+          <p class="font-poppins font-normal sm:text-[16px] text-[14px] text-[#7B7B7B]">
             Everything you need for a seamless travel experience.
           </p>
         </div>
@@ -301,7 +301,8 @@
       </section>
 
       <section class="w-full mx-auto">
-        <div class="w-[1221px] mx-auto h-[595px] grid grid-cols-[462px_1fr] place-items-center gap-2">
+        <div
+          class="max-w-[1221px] mx-auto h-[595px] grid lg:grid-cols-[462px_1fr] place-items-center gap-2 mt-12 lg:mt-0">
           <div
             class="w-[462px] mx-auto lg:mx-0 h-[566px] bg-[#1E1E1E] flex-1 flex flex-col gap-[53px] py-[50px] px-[70px] text-[#ffffff] rounded-[20px]">
             <h2 class="font-montserrat font-bold text-[60px] text-center leading-[75px]">Popular Packages</h2>
@@ -411,7 +412,7 @@
         </div>
       </section>
 
-      <section class="min-h[705px] flex gap-[30px] items-center justify-center flex-col">
+      <section class="min-h[705px] lg:flex gap-[30px] items-center justify-center flex-col hidden">
         <div class="min-h[147px] flex gap-[8px] justify-center items-center flex-col mb-[100px]">
           <h1 class="font-montserrat font-bold text-[clamp(1.563rem,1.057rem+1.797vw,2.25rem)] text-[#1e1e1e]">
             Testimonials
@@ -652,15 +653,17 @@
           </div>
         </div>
       </section>
-      <section class="max-h-[518px] flex flex-col items-center">
-        <div class="text-center">
-          <h2 class="font-montserrat font-bold text-[36px] text-[#1e1e1e]">Favourite Tour</h2>
-          <p class="font-normal text-base text-[#7b7b7b]">
+      <section class="flex flex-col items-center">
+        <div class="text-center w-full">
+          <h2 class="font-montserrat font-bold text-[clamp(1.563rem,1.057rem+1.797vw,2.25rem)] text-[#1e1e1e]">
+            Favourite Tour
+          </h2>
+          <p class="font-normal sm:text-[16px] text-[14px] text-[#7b7b7b]">
             Discover our most loved tours, curated for unforgettable adventures.
           </p>
         </div>
-        <div class="w-[1188px] h-[331px] rounded-[20px] p-[30px] flex flex-col gap-[21px] items-center">
-          <form class="grid grid-cols-4 gap-x-[10px]">
+        <div class="max-w-[1188px] min-h-[331px] rounded-[20px] p-[30px] flex flex-col gap-[21px] items-center w-full">
+          <form class="grid lg:grid-cols-4 gap-x-[10px] md:grid-cols-2 w-full">
             <div class="flex flex-col gap-[20px] justify-start items-start">
               <label class="font-poppins text-base font-semibold" for="destination">Where are you going?</label>
               <input
@@ -695,18 +698,18 @@
         </div>
       </section>
       <!-- About Section -->
-      <section class="w-full h-[713px]">
+      <section class="w-full min-h-[713px]">
         <div class="h-[147px] flex flex-col gap-[8px] justify-center items-center">
           <p class="font-montserrat font-bold text-[clamp(1.563rem,1.057rem+1.797vw,2.25rem)]">About</p>
-          <p class="font-poppins font-normal sm:text-[16px] text-[12px] text-[#7B7B7B]">
+          <p class="font-poppins font-normal sm:text-[16px] text-[14px] text-[#7B7B7B]">
             Your Gateway to Seamless and Unforgettable Travel Experiences.
           </p>
         </div>
-        <div class="w-full flex gap-[15px] justify-center">
-          <div class="w-[725px] h-[566px] rounded-[20px] overflow-clip">
-            <img class="w-full object-cover" src="./assets/img/nature-landscape-with-beach-view.webp" alt="" />
+        <div class="w-full flex gap-[15px] justify-center md:flex-row flex-col items-center">
+          <div class="max-w-[725px] h-[566px] rounded-[20px] overflow-clip">
+            <img class="max-w-full object-cover" src="./assets/img/nature-landscape-with-beach-view.webp" alt="" />
           </div>
-          <div class="w-[462px] h-[566px] bg-[#1e1e1e] text-white py-[50px] px-[70px] rounded-[20px]">
+          <div class="max-w-[462px] h-[566px] bg-[#1e1e1e] text-white py-[50px] px-[70px] rounded-[20px]">
             <h2 class="mb-[27px] font-montserrat font-bold text-[60px]">Traveling Experts</h2>
             <p class="font-poppins font-normal text-base text-pretty">
               we are dedicated to simplifying your travel experiences. From planning itineraries to connecting you with
@@ -718,18 +721,19 @@
         </div>
       </section>
       <!-- Meet Our Team Section -->
-      <section class="w-[1440px] h-[609.33px]">
-        <div class="h-[147px] flex flex-col gap-[8px] justify-center items-center">
+      <section class="w-full">
+        <div class="h-[147px] flex flex-col gap-[8px] justify-center items-center mx-auto">
           <p class="font-montserrat font-bold text-[36px]">Meet Our Team</p>
           <p class="font-poppins font-normal text-[16px] text-[#7B7B7B]">
             Get to know the passionate experts behind your unforgettable journeys.
           </p>
         </div>
 
-        <div class="w-[1198px] h-[462.39px] gap-[14.73px] mx-auto grid grid-cols-4">
+        <div
+          class="max-w-[1198px] min-h-[462.39px] gap-[14.73px] mx-auto grid lg:grid-cols-4 md:grid-cols-2 place-items-center">
           <!-- first card -->
           <div
-            class="w-[288.46px] h-[462px] rounded-[17px] py-[50px] px-[30px] flex flex-col gap-[25px] items-center"
+            class="w-full h-[462px] rounded-[17px] py-[50px] px-[30px] flex flex-col gap-[25px] items-center"
             style="box-shadow: 0px 2px 24px 16px #0000001a">
             <div class="w-[121.27px] rounded-full overflow-clip">
               <img class="object-cover w-full aspect-square" src="./assets/img/card1.jpg" alt="" />
@@ -765,7 +769,7 @@
           </div>
           <!-- second card -->
           <div
-            class="w-[288.46px] h-[462px] rounded-[17px] py-[50px] px-[30px] flex flex-col gap-[25px] items-center"
+            class="w-full h-[462px] rounded-[17px] py-[50px] px-[30px] flex flex-col gap-[25px] items-center"
             style="box-shadow: 0px 2px 24px 16px #0000001a">
             <div class="w-[121.27px] rounded-full overflow-clip">
               <img class="object-cover w-full aspect-square" src="./assets/img/card2.jpg" alt="" />
@@ -801,7 +805,7 @@
           </div>
           <!-- third card -->
           <div
-            class="w-[288.46px] h-[462px] rounded-[17px] py-[50px] px-[30px] flex flex-col gap-[25px] items-center"
+            class="w-full h-[462px] rounded-[17px] py-[50px] px-[30px] flex flex-col gap-[25px] items-center"
             style="box-shadow: 0px 2px 24px 16px #0000001a">
             <div class="w-[121.27px] rounded-full overflow-clip">
               <img class="object-cover w-full aspect-square" src="./assets/img/card3.jpg" alt="" />
@@ -837,7 +841,7 @@
           </div>
           <!-- fourth card -->
           <div
-            class="w-[288.46px] h-[462px] rounded-[17px] py-[50px] px-[30px] flex flex-col gap-[25px] items-center"
+            class="w-full h-[462px] rounded-[17px] py-[50px] px-[30px] flex flex-col gap-[25px] items-center"
             style="box-shadow: 0px 2px 24px 16px #0000001a">
             <div class="w-[121.27px] rounded-full overflow-clip">
               <img class="object-cover w-full aspect-square" src="./assets/img/card4.jpg" alt="" />
