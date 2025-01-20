@@ -30,14 +30,15 @@
       </video>
       <div class="relative z-10 w-full bg-gradient-to-r from-[#1E1E1E80] to-[#48484880] backdrop-blur-[5px]">
         <nav
-          class="flex justify-between items-center h-[68px] px-[40px] py-[16px] max-w-[1198px] mx-auto text-white w-full">
+          class="flex justify-between items-center min-h-[68px] px-[40px] py-[16px] max-w-[1198px] mx-auto text-white w-full">
           <div class="flex items-center gap-[10px] min-w-[121.83px] h-[34.52px]">
             <img src="./assets/img/Logo.svg" alt="" width="39.83px" height="34.52px" />
 
             <span class="font-mulish text-base font-extrabold text-white">Wivali AI</span>
           </div>
 
-          <div class="flex w-[394px] h-[47px] justify-between items-center font-poppins text-base font-normal">
+          <div
+            class="hidden md:flex w-[394px] h-[47px] justify-between items-center font-poppins text-base font-normal menu">
             <p>Home</p>
             <p>About</p>
             <p>Blog</p>
@@ -46,6 +47,31 @@
               <img src="./assets/img/search.svg" alt="" />
             </div>
           </div>
+          <!-- menu icon -->
+          <svg
+            class="md:hidden menu-open cursor-pointer"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="39px"
+            height="39px"
+            viewBox="0 0 50 50">
+            <path
+              d="M 3 9 A 1.0001 1.0001 0 1 0 3 11 L 47 11 A 1.0001 1.0001 0 1 0 47 9 L 3 9 z M 3 24 A 1.0001 1.0001 0 1 0 3 26 L 47 26 A 1.0001 1.0001 0 1 0 47 24 L 3 24 z M 3 39 A 1.0001 1.0001 0 1 0 3 41 L 47 41 A 1.0001 1.0001 0 1 0 47 39 L 3 39 z"></path>
+          </svg>
+
+          <!-- close icon -->
+          <svg
+            class="hidden md:hidden menu-close cursor-pointer"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="39px"
+            height="39px"
+            viewBox="0 0 50 50">
+            <path
+              d="M 25 22.585938 L 5.7070312 3.2929688 A 1.0001 1.0001 0 1 0 4.2929688 4.7070312 L 22.585938 25 L 4.2929688 45.292969 A 1.0001 1.0001 0 1 0 5.7070312 46.707031 L 25 27.414062 L 44.292969 46.707031 A 1.0001 1.0001 0 1 0 45.707031 45.292969 L 27.414062 25 L 45.707031 4.7070312 A 1.0001 1.0001 0 1 0 44.292969 3.2929688 L 25 22.585938 z"></path>
+          </svg>
         </nav>
       </div>
       <!-- Other header Content in the header ------------------------------------------------------- -->
@@ -729,8 +755,7 @@
           </p>
         </div>
 
-        <div
-          class="max-w-[1198px] min-h-[462.39px] gap-[14.73px] mx-auto grid lg:grid-cols-4 md:grid-cols-2 place-items-center">
+        <div class="max-w-[1198px] gap-[14.73px] mx-auto grid lg:grid-cols-4 md:grid-cols-2 place-items-center">
           <!-- first card -->
           <div
             class="w-full h-[462px] rounded-[17px] py-[50px] px-[30px] flex flex-col gap-[25px] items-center"
@@ -885,13 +910,13 @@
             A profound tranquility has embraced my soul, just like these.
           </p>
         </div>
-        <div class="w-full max-w-[1200px] h-[561.63px] grid grid-cols-3 gap-[12px] mx-auto place-items-center">
+        <div class="max-w-[1200px] grid lg:grid-cols-3 md:grid-cols-2 gap-[12px] mx-auto place-items-center">
           <!-- first card -->
           <div
-            class="w-[391px] max-h-[561.63px] font-poppins p-2 rounded-[19.45px] group"
+            class="max-w-[391px] font-poppins p-2 rounded-[19.45px] group"
             style="box-shadow: 0px 2px 24px 16px #0000001a">
-            <div class="w-[372px]">
-              <div class="w-full h-[237.34px] overflow-clip rounded-t-[11.45px]">
+            <div class="w-full">
+              <div class="w-full overflow-clip rounded-t-[11.45px]">
                 <img
                   class="w-full object-cover group-hover:scale-110 transition duration-500"
                   src="./assets/img/bigCard1.jpg"
@@ -910,10 +935,10 @@
           </div>
           <!-- second card -->
           <div
-            class="w-[391px] max-h-[561.63px] font-poppins p-2 rounded-[19.45px] group"
+            class="max-w-[391px] font-poppins p-2 rounded-[19.45px] group"
             style="box-shadow: 0px 2px 24px 16px #0000001a">
-            <div class="w-[372px]">
-              <div class="w-full h-[237.34px] overflow-clip rounded-t-[11.45px]">
+            <div class="w-full">
+              <div class="w-full overflow-clip rounded-t-[11.45px]">
                 <img
                   class="w-full object-cover group-hover:scale-110 transition duration-500"
                   src="./assets/img/bigCard2.jpg"
@@ -931,10 +956,10 @@
           </div>
           <!-- third card -->
           <div
-            class="w-[391px] max-h-[561.63px] font-poppins p-2 rounded-[19.45px] group"
+            class="max-w-[391px] font-poppins p-2 rounded-[19.45px] group"
             style="box-shadow: 0px 2px 24px 16px #0000001a">
-            <div class="w-[372px]">
-              <div class="w-full h-[237.34px] overflow-clip rounded-t-[11.45px] aspect-[3/2] r">
+            <div class="w-full">
+              <div class="w-full overflow-clip rounded-t-[11.45px] aspect-[3/2]">
                 <img
                   class="w-full object-cover group-hover:scale-x-150 transition duration-500"
                   src="./assets/img/bigCard4.jpg"
@@ -954,12 +979,13 @@
       </section>
 
       <!-- Contact Us Section -->
-      <section class="w-[1202px] min-h-[569px] grid grid-cols-[462px_1fr] gap-[15px] mx-auto">
+      <section
+        class="max-w-[1202px] min-h-[569px] grid lg:grid-cols-[462px_1fr] md: gap-[15px] mx-auto mt-4 place-items-center">
         <div
-          class="w-[462px] h-full rounded-[20px] px-[70px] pt-[91px] pb-[50px] bg-[#1E1E1E] text-white flex flex-col justify-center gap-[61px]"
+          class="max-w-[462px] rounded-[20px] px-[70px] pt-[91px] pb-[50px] bg-[#1E1E1E] text-white flex flex-col justify-center gap-[61px]"
           style="box-shadow: 0px 2px 24px 16px #0000001a">
           <h3 class="font-montserrat font-bold text-[clamp(1.563rem,1.057rem+1.797vw,2.25rem)]">Get in Touch</h3>
-          <div class="flex gap-[32px] justify-center items-center">
+          <div class="flex gap-[32px] items-center">
             <!-- location pin -->
             <svg width="68" height="67" viewBox="0 0 68 67" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_331_14)">
@@ -1016,7 +1042,7 @@
           </div>
         </div>
         <div
-          class="w-[725px] min-h-[569px] px-[53px] pt-[44px] pb-[10px] flex flex-col justify-center rounded-[20px] gap-[14px]"
+          class="max-w-[725px] min-h-[569px] px-[53px] pt-[44px] pb-[10px] flex flex-col justify-center rounded-[20px] gap-[14px]"
           style="box-shadow: 0px 2px 24px 16px #0000001a">
           <div class="flex flex-col gap-[20px]">
             <h3 class="font-poppins font-bold text-[20px] text-[#000000]">Send a Message</h3>
@@ -1039,7 +1065,7 @@
       </section>
       <!-- footer section  -->
       <footer
-        class="w-[1440px] h-[387.69px] py-[68px] px-[84px] flex flex-col mx-auto justify-center items-center border-t border-[#DFDFDF] mt-10">
+        class="max-w-[1440px] h-[387.69px] py-[68px] px-[84px] flex flex-col mx-auto justify-center items-center border-t border-[#DFDFDF] mt-10">
         <div
           class="w-full h-[160.69px] flex flex-col gap-[29px] justify-center items-center border-b border-[#DFDFDF] pb-[29px]">
           <svg width="44" height="31" viewBox="0 0 44 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1063,7 +1089,7 @@
               fill="#1E1E1E" />
           </svg>
 
-          <div class="w-[492px] h-[48px] flex justify-between items-center text-[#535353]">
+          <div class="h-[48px] sm:gap-8 gap-2 flex justify-between items-center text-[#535353] text-sm sm:text-lg">
             <p>Home</p>
             <p>About</p>
             <p>Services</p>
@@ -1090,13 +1116,13 @@
             </svg>
           </div>
         </div>
-        <div class="font-poppins flex justify-between w-full items-center mt-[40px]">
+        <div class="font-poppins flex justify-between w-full items-center md:flex-row flex-col mt-[40px] gap-4">
           <div class="flex w-[253px] items-center gap-[24px]">
             <p class="bg-[#ffa500] py-[12px] px-[25px] text-white rounded-[5px]">English</p>
             <p class="text-[#535353] text-[14px]">Arabic</p>
             <p class="text-[#535353] text-[14px]">French</p>
           </div>
-          <p class="font-poppins font-normal text-base">Non Copyrighted © 2022 Upload by Wivali</p>
+          <p class="font-poppins font-normal text-xs sm:text-base">Non Copyrighted © 2022 Upload by Wivali</p>
         </div>
       </footer>
     </main>

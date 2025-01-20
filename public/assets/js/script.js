@@ -6,7 +6,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const slides = slider.children;
   const slidesRomance = sliderRomance.children;
   const slide3images = getSlidesToShow();
+  const menu = document.querySelector(".menu");
+  const openButton = document.querySelector(".menu-open");
+  const closeButton = document.querySelector(".menu-close");
   let index = 0;
+
+  // nav toggler control functionality
+  openButton.addEventListener("click", () => {
+    openButton.classList.toggle("hidden");
+    closeButton.classList.toggle("hidden");
+    menu.classList.toggle("hidden");
+  });
+
+  closeButton.addEventListener("click", () => {
+    openButton.classList.toggle("hidden");
+    closeButton.classList.toggle("hidden");
+    menu.classList.toggle("hidden");
+  });
 
   // function to slide the sliderRomance;
   const autoSlide = () => {
