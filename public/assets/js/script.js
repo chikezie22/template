@@ -7,21 +7,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const slidesRomance = sliderRomance.children;
   const slide3images = getSlidesToShow();
   const menu = document.querySelector(".menu");
-  const openButton = document.querySelector(".menu-open");
-  const closeButton = document.querySelector(".menu-close");
+  const menuOpen = document.querySelector(".menu-open");
+  const menuClose = document.querySelector(".menu-close");
   let index = 0;
 
-  // nav toggler control functionality
-  openButton.addEventListener("click", () => {
-    openButton.classList.toggle("hidden");
-    closeButton.classList.toggle("hidden");
+  // function to handle nav toggling
+  menuOpen.addEventListener("click", () => {
     menu.classList.toggle("hidden");
+    menu.classList.add("flex");
+    menuOpen.classList.toggle("hidden");
+    menuClose.classList.toggle("hidden");
   });
 
-  closeButton.addEventListener("click", () => {
-    openButton.classList.toggle("hidden");
-    closeButton.classList.toggle("hidden");
+  menuClose.addEventListener("click", () => {
     menu.classList.toggle("hidden");
+    menu.classList.remove("flex");
+    menuOpen.classList.toggle("hidden");
+    menuClose.classList.toggle("hidden");
   });
 
   // function to slide the sliderRomance;

@@ -23,12 +23,13 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
-  <body class="min-h-screen overflow-x-clip relative">
-    <header class="relative w-full sm:min-h-screen min-h-[80dvh]">
-      <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+  <body class="min-h-screen overflow-x-hidden">
+    <header class="w-full h-dvh flex justify-center items-center">
+      <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-[-1]">
         <source src="./assets/video/video.mp4" type="video/mp4" />
       </video>
-      <div class="relative z-10 w-full bg-gradient-to-r from-[#1E1E1E80] to-[#48484880] backdrop-blur-[5px]">
+      <div
+        class="fixed top-0 left-0 w-full bg-gradient-to-r from-[#1E1E1E80] to-[#48484880] backdrop-blur-[5px] min-h-[68px] z-20">
         <nav
           class="flex justify-between items-center min-h-[68px] px-[40px] py-[16px] max-w-[1198px] mx-auto text-white w-full">
           <div class="flex items-center gap-[10px] min-w-[121.83px] h-[34.52px]">
@@ -38,7 +39,7 @@
           </div>
 
           <div
-            class="hidden md:flex w-[394px] h-[47px] justify-between items-center font-poppins text-base font-normal menu">
+            class="hidden w-full absolute md:bg-none bg-gradient-to-r from-[#1E1E1E80] to-[#48484880] md:static -translate-x-1/2 md:translate-x-0 backdrop-blur-[5px] md:backdrop-blur-none top-[71px] left-1/2 md:flex flex-col md:flex-row md:w-[394px] h-dvh md:h-[47px] md:justify-between items-center font-poppins text-base font-normal menu justify-start gap-14 md:gap-0">
             <p>Home</p>
             <p>About</p>
             <p>Blog</p>
@@ -75,8 +76,7 @@
         </nav>
       </div>
       <!-- Other header Content in the header ------------------------------------------------------- -->
-      <div
-        class="relative z-10 w-full min-h-full flex flex-col sm:mt-[71px] mt-[8rem] items-center text-white px-4 sm:px-8 gap-[31px]">
+      <div class="w-full flex flex-col items-center text-white px-4 sm:px-8 gap-[31px]">
         <!-- Title -->
         <p class="font-montserrat font-normal text-lg sm:text-xl md:text-2xl lg:text-[30.67px] text-center">
           Unforgettable experiences tailored for you
@@ -122,7 +122,7 @@
         </div>
       </div>
     </header>
-    <main class="relative w-full h-full">
+    <main class="w-full">
       <div class="relative w-full min-h-[508px]">
         <section class="h-[508px] max-w-[1197px] mx-auto absolute inset-0 top-[-50px]">
           <div
@@ -295,29 +295,29 @@
           <div
             class="min-w-[599px] grid grid-cols-1 place-items-center sm:grid-cols-2 gap-[21.78px] translate-y-[50px] group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
             <div
-              class="w-[288.21px] h-[303.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#0191c3] rounded-[20.79px]">
-              <img src="./assets/img/location.svg" alt="location" />
+              class="w-full h-[303.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#0191c3] rounded-[20.79px]">
+              <img src="./assets/img/location.svg" alt="location" width="66px" height="67px" />
               <p class="font-poppins font-semibold text-center text-[#FFFFFF] text-[16.59px] w-[214.83px]">
                 Tailored itineraries to match your unique preferences.
               </p>
             </div>
             <div
-              class="w-[288.21px] h-[303.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#d64a17] rounded-[20.79px]">
-              <img src="./assets/img/plane.svg" alt="plane" />
+              class="w-full h-[303.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#d64a17] rounded-[20.79px]">
+              <img src="./assets/img/plane.svg" alt="plane" height="67px" width="68px" />
               <p class="font-poppins font-semibold text-center text-[#FFFFFF] text-[16.59px] w-[214.83px]">
                 Seamless bookings for flights and accomodations worldwide.
               </p>
             </div>
             <div
-              class="w-[288.21px] h-[303.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#469325] rounded-[20.79px]">
-              <img src="./assets/img/shield.svg" alt="shield" />
+              class="w-full h-[303.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#469325] rounded-[20.79px]">
+              <img src="./assets/img/shield.svg" alt="shield" height="67px" width="68px" />
               <p class="font-poppins font-semibold text-center text-[#FFFFFF] text-[16.59px] w-[214.83px]">
                 Comprehensive coverage for a worry-free journey.
               </p>
             </div>
             <div
-              class="w-[288.21px] h-[303.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#626262] rounded-[20.79px]">
-              <img src="./assets/img/phone.svg" alt="phone" />
+              class="w-full h-[303.89px] flex flex-col gap-[20.79px] justify-center items-center bg-[#626262] rounded-[20.79px]">
+              <img src="./assets/img/phone.svg" alt="phone" height="67px" width="68px" />
               <p class="font-poppins font-semibold text-center text-[#FFFFFF] text-[16.59px] w-[214.83px]">
                 Expert assistance available anytime,anywhere.
               </p>
@@ -1126,7 +1126,6 @@
         </div>
       </footer>
     </main>
-
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
